@@ -1,3 +1,4 @@
+import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/sections/About";
 import { SkillsMatrix } from "@/components/sections/SkillsMatrix";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <>
       <main className="flex-1">
+        <Hero />
         <About />
         <SkillsMatrix />
         <ExperienceTimeline />
