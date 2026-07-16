@@ -10,27 +10,25 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-orbitron);
+  --font-display: var(--font-press-start-2p);
 }
 
 html {
   color-scheme: dark;
 }
 
-@keyframes retro-glow {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 18px rgba(232, 121, 249, 0.55))
-      drop-shadow(0 0 36px rgba(56, 189, 248, 0.35));
-  }
-  50% {
-    filter: drop-shadow(0 0 28px rgba(232, 121, 249, 0.8))
-      drop-shadow(0 0 52px rgba(56, 189, 248, 0.55));
-  }
+.pixel-text-shadow {
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 0 #000;
 }
 
-.animate-retro-glow {
-  animation: retro-glow 3.5s ease-in-out infinite;
+@media (min-width: 640px) {
+  .pixel-text-shadow {
+    text-shadow:
+      3px 3px 0 #000,
+      6px 6px 0 #000;
+  }
 }
 
 body {

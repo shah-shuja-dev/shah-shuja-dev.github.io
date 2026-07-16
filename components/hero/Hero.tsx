@@ -19,10 +19,10 @@ export function Hero() {
           style={{ opacity }}
           className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center"
         >
-          <h1 className="animate-retro-glow bg-gradient-to-r from-fuchsia-400 via-sky-300 to-violet-400 bg-clip-text font-display text-4xl font-black uppercase tracking-wider text-transparent sm:text-6xl md:text-7xl">
+          <h1 className="pixel-text-shadow font-display text-xl uppercase leading-relaxed text-[#e52521] sm:text-3xl md:text-4xl">
             {profile.name}
           </h1>
-          <p className="mt-6 font-display text-sm uppercase tracking-[0.35em] text-sky-300/80 sm:text-base">
+          <p className="pixel-text-shadow mt-8 font-display text-[10px] uppercase leading-loose text-yellow-300 sm:text-sm">
             {profile.title}
           </p>
           <p className="mt-16 animate-pulse text-xs uppercase tracking-[0.3em] text-foreground/40">
