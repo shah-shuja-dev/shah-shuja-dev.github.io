@@ -10,6 +10,10 @@ describe("Hero", () => {
     const { unmount, container } = render(<Hero />);
     expect(container.querySelector("canvas")).toBeInTheDocument();
     expect(screen.getByText(profile.name)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /let's talk/i })).toHaveAttribute(
+      "href",
+      "#contact",
+    );
     unmount();
   });
 });
