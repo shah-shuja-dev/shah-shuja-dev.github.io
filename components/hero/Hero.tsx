@@ -9,7 +9,7 @@ import { useScrollVelocity } from "./useScrollVelocity";
 export function Hero() {
   const wrapperRef = useRef<HTMLElement>(null);
   const { scrollYProgress, smoothVelocity } = useScrollVelocity(wrapperRef);
-  const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.85, 1], [1, 1, 0]);
 
   return (
     <section ref={wrapperRef} className="relative h-[250vh]">
@@ -25,6 +25,12 @@ export function Hero() {
           <p className="mt-4 text-lg text-foreground/70 sm:text-xl">
             {profile.title}
           </p>
+          <a
+            href="#contact"
+            className="mt-8 rounded-full border border-sky-400/40 bg-sky-400/10 px-6 py-2.5 text-sm font-medium text-sky-300 transition-colors hover:bg-sky-400/20"
+          >
+            Let&apos;s Talk
+          </a>
           <p className="mt-16 animate-pulse text-xs uppercase tracking-[0.3em] text-foreground/40">
             Scroll
           </p>

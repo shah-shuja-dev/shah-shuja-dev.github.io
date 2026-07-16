@@ -1,11 +1,12 @@
 import { profile } from "@/content/profile";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function ContactFooter() {
   const year = new Date().getFullYear();
 
   return (
     <footer id="contact" className="border-t border-white/10 px-6 py-16">
-      <div className="mx-auto max-w-3xl text-center">
+      <Reveal className="mx-auto max-w-3xl text-center">
         <h2 className="text-2xl font-semibold text-foreground">
           Let&apos;s work together
         </h2>
@@ -15,7 +16,7 @@ export function ContactFooter() {
         <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm font-medium">
           <a
             href={`mailto:${profile.email}`}
-            className="text-sky-400 hover:text-sky-300"
+            className="text-sky-400 transition-colors hover:text-sky-300"
           >
             {profile.email}
           </a>
@@ -23,7 +24,7 @@ export function ContactFooter() {
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-400 hover:text-sky-300"
+            className="text-sky-400 transition-colors hover:text-sky-300"
           >
             GitHub
           </a>
@@ -31,7 +32,7 @@ export function ContactFooter() {
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sky-400 hover:text-sky-300"
+            className="text-sky-400 transition-colors hover:text-sky-300"
           >
             LinkedIn
           </a>
@@ -39,7 +40,7 @@ export function ContactFooter() {
         <p className="mt-10 text-xs text-foreground/40">
           © {year} {profile.name}
         </p>
-      </div>
+      </Reveal>
     </footer>
   );
 }

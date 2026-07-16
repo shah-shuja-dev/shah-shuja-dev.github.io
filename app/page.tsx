@@ -1,5 +1,7 @@
 import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/sections/About";
+import { WhatIDo } from "@/components/sections/WhatIDo";
+import { WhyHireMe } from "@/components/sections/WhyHireMe";
 import { SkillsMatrix } from "@/components/sections/SkillsMatrix";
 import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
@@ -12,6 +14,8 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <About />
+        <WhatIDo />
+        <WhyHireMe />
         <SkillsMatrix />
         <ExperienceTimeline />
         <ProjectsShowcase />
