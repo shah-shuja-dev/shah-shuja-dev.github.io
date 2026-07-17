@@ -1,4 +1,5 @@
 import { Hero } from "@/components/hero/Hero";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
 import { About } from "@/components/sections/About";
 import { WhatIDo } from "@/components/sections/WhatIDo";
 import { WhyHireMe } from "@/components/sections/WhyHireMe";
@@ -13,13 +14,16 @@ export default function Home() {
     <>
       <main className="flex-1">
         <Hero />
-        <About />
-        <WhatIDo />
-        <WhyHireMe />
-        <SkillsMatrix />
-        <ExperienceTimeline />
-        <ProjectsShowcase />
-        <EducationCerts />
+        <div className="relative">
+          <AmbientBackground />
+          <About />
+          <WhatIDo />
+          <WhyHireMe />
+          <SkillsMatrix />
+          <ExperienceTimeline />
+          <ProjectsShowcase />
+          <EducationCerts />
+        </div>
       </main>
       <ContactFooter />
     </>

@@ -1,6 +1,6 @@
 import { capabilities } from "@/content/whatIDo";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Card } from "@/components/ui/Card";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function WhatIDo() {
@@ -16,14 +16,14 @@ export function WhatIDo() {
             delay={i * 0.08}
             className={capability.highlight ? "sm:col-span-2" : undefined}
           >
-            <Card
+            <SpotlightCard
               className={
                 capability.highlight
                   ? "border-sky-400/40 bg-sky-400/[0.06]"
                   : undefined
               }
             >
-              <span className="font-mono text-xs text-sky-400">
+              <span className="inline-block font-mono text-xs text-sky-400 transition-transform duration-300 group-hover:scale-125">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-2 text-lg font-semibold text-foreground">
@@ -32,7 +32,7 @@ export function WhatIDo() {
               <p className="mt-2 text-sm text-foreground/70">
                 {capability.description}
               </p>
-            </Card>
+            </SpotlightCard>
           </Reveal>
         ))}
       </div>
