@@ -5,8 +5,12 @@ import { whyHireMePoints, whyHireMeStatement } from "@/content/whyHireMe";
 
 describe("WhyHireMe", () => {
   it("renders the statement and every point", () => {
-    render(<WhyHireMe />);
-    expect(screen.getByText(whyHireMeStatement)).toBeInTheDocument();
+    const { container } = render(<WhyHireMe />);
+    // The statement is split into per-word spans for the reveal animation,
+    // so match against the section's combined text instead of a single node.
+    expect(container.textContent?.replace(/\s+/g, " ")).toContain(
+      whyHireMeStatement,
+    );
     for (const point of whyHireMePoints) {
       expect(screen.getByText(point.title)).toBeInTheDocument();
     }
